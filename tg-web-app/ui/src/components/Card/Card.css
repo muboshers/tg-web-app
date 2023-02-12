@@ -1,0 +1,78 @@
+:root {
+  --primary-color: #e0c521;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 150px;
+  flex-direction: column;
+  border: 1.5px #eee;
+  position: relative;
+  padding: 0.8rem 0.5rem;
+  border-radius: 5px;
+  margin: 13px 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.card__title {
+  font-weight: 400;
+  text-align: center;
+}
+
+.card__title .card__price {
+  font-weight: bold;
+}
+
+.image__container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.image__container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.btn__container {
+  display: flex;
+  justify-content: center;
+}
+
+.card__badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #1976d2;
+  display: flex;
+  transform: scale(1);
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.6s ease;
+}
+
+.card__badge.animation-badge {
+  animation: badgeScale 0.4s ease;
+}
+
+@keyframes badgeScale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.card__badge-hidden {
+  transform: scale(0);
+  transition: 0.7s ease;
+}
